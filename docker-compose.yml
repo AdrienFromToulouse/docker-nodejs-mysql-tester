@@ -8,7 +8,7 @@ services:
     command: >
       /bin/bash -c "
         ./wait-for-it.sh mysql:3306 -t 20
-        npm run mocha;
+        npm run jest;
       "
     depends_on:
       - mysql

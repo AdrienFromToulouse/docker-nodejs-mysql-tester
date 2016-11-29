@@ -6,19 +6,15 @@
   "scripts": {
     "pretest": "docker-compose rm --force test; npm run start-db",
     "test": "docker-compose up test",
-    "jest": "jest",
+    "mocha": "mocha --reporter spec ./test.test.js",
     "start-db": "docker-compose up -d mysql;"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest-cli": "^17.0.3"
+    "mocha": "^3.2.0"
   },
   "dependencies": {
     "mysql": "^2.11.1"
-  },
-  "jest": {
-    "verbose": true,
-    "testEnvironment": "node"
   }
 }
